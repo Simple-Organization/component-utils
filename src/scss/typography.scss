@@ -1,0 +1,63 @@
+@use 'sass:math';
+@use './_breakpoints.scss' as breakpoints;
+
+@function multiplyCeil($number, $multiplier) {
+  @return math.div(math.ceil($number * $multiplier), $multiplier);
+}
+
+@mixin typography-scale($increase) {
+  $h1: multiplyCeil(math.pow($increase, 5), 1000);
+  $h2: multiplyCeil(math.pow($increase, 3), 1000);
+  $h3: multiplyCeil(math.pow($increase, 2), 1000);
+  $h6: multiplyCeil(math.pow($increase, -1), 1000);
+
+  @if ($h1 > 8) {
+    $h1: multiplyCeil(math.pow($increase, 4), 1000);
+  }
+
+  --text-1: #{$h1}rem;
+  --text-2: #{$h2}rem;
+  --text-3: #{$h3}rem;
+  --text-4: #{$increase}rem;
+  --text-5: 1rem;
+  --text-6: #{$h6}rem;
+
+  --line-1: #{multiplyCeil($h1 * 1.1, 4)}rem;
+  --line-2: #{multiplyCeil($h2 * 1.3, 4)}rem;
+  --line-3: #{multiplyCeil($h3 * 1.4, 4)}rem;
+  --line-4: #{multiplyCeil($increase * 1.5, 4)}rem;
+  --line-5: 1.5rem;
+  --line-6: #{multiplyCeil($h6 * 1.6, 4)}rem;
+  main {
+    --background-100: hsl(240, 21%, 12%) !important;
+  }
+}
+
+//
+//
+
+.typography-base {
+  //
+  // major-second for mobile
+  @include typography-scale(1.125);
+
+  //
+  // minor-third for tablet and up
+  @include breakpoints.tablet-plus {
+    @include typography-scale(1.2);
+  }
+
+  //
+  // notebook-plus for desktop and up
+  @include breakpoints.notebook-plus {
+    @include typography-scale(1.25);
+  }
+}
+
+.perfect-fourth {
+  @include typography-scale(1.333);
+}
+
+.golden-ratio {
+  @include typography-scale(1.618);
+}
