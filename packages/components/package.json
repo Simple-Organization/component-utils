@@ -1,5 +1,5 @@
 {
-  "name": "component-utils-components",
+  "name": "component-utils-website",
   "version": "1.0.0-next.0",
   "author": "Simple Organization",
   "scripts": {
@@ -16,11 +16,7 @@
   },
   "bugs": "https://github.com/Simple-Organization/component-utils/issues",
   "license": "MIT",
-  "devDependencies": {
-    "prettier": "^3.3.3",
-    "typescript": "^5.5.4",
-    "vite": "^5.4.2"
-  },
+  "devDependencies": {},
   "files": [
     "dist/index.d.ts",
     "dist/index.js"
@@ -28,7 +24,5 @@
   "types": "dist/index.d.ts",
   "type": "module",
   "packageManager": "pnpm@9.6.0",
-  "dependencies": {
-    "glhera-router": "1.0.0-next.8"
-  }
+  "dependencies": {}
 }

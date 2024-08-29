@@ -67,6 +67,8 @@ importers:
         specifier: ^5.5.4
         version: 5.5.4
 
+  packages/components: {}
+
   packages/interpreter:
     devDependencies:
       '@playwright/test':
