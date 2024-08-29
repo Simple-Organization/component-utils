@@ -40,6 +40,76 @@ importers:
         specifier: ^5.4.2
         version: 5.4.2(@types/node@22.5.1)
 
+  packages/cli:
+    devDependencies:
+      '@playwright/test':
+        specifier: ^1.46.1
+        version: 1.46.1
+      '@types/node':
+        specifier: ^22.4.0
+        version: 22.5.1
+      esbuild:
+        specifier: ^0.23.1
+        version: 0.23.1
+      prettier:
+        specifier: ^3.3.3
+        version: 3.3.3
+      rollup:
+        specifier: ^4.21.0
+        version: 4.21.1
+      rollup-plugin-dts:
+        specifier: ^6.1.1
+        version: 6.1.1(rollup@4.21.1)(typescript@5.5.4)
+      tsx:
+        specifier: ^4.17.0
+        version: 4.19.0
+      typescript:
+        specifier: ^5.5.4
+        version: 5.5.4
+
+  packages/interpreter:
+    devDependencies:
+      '@playwright/test':
+        specifier: ^1.46.1
+        version: 1.46.1
+      '@types/node':
+        specifier: ^22.4.0
+        version: 22.5.1
+      esbuild:
+        specifier: ^0.23.1
+        version: 0.23.1
+      prettier:
+        specifier: ^3.3.3
+        version: 3.3.3
+      rollup:
+        specifier: ^4.21.0
+        version: 4.21.1
+      rollup-plugin-dts:
+        specifier: ^6.1.1
+        version: 6.1.1(rollup@4.21.1)(typescript@5.5.4)
+      tsx:
+        specifier: ^4.17.0
+        version: 4.19.0
+      typescript:
+        specifier: ^5.5.4
+        version: 5.5.4
+
+  packages/website:
+    dependencies:
+      glhera-router:
+        specifier: 1.0.0-next.8
+        version: 1.0.0-next.8
+    devDependencies:
+      prettier:
+        specifier: ^3.3.3
+        version: 3.3.3
+      typescript:
+        specifier: ^5.5.4
+        version: 5.5.4
+      vite:
+        specifier: ^5.4.2
+        version: 5.4.2(@types/node@22.5.1)
+
 packages:
 
   '@babel/code-frame@7.24.7':

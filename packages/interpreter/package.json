@@ -1,10 +1,9 @@
 {
-  "name": "component-utils-website",
+  "name": "component-utils-interpreter",
   "version": "1.0.0-next.0",
   "author": "Simple Organization",
   "scripts": {
-    "dev": "vite",
-    "build": "vite build",
+    "build": "tsc && rollup -c && tsx esbuild.ts",
     "format": "prettier --write \"src/**/*.ts\" \"tests/**/*.ts\"",
     "test": "playwright test",
     "prepack": "pnpm build"
@@ -17,9 +16,14 @@
   "bugs": "https://github.com/Simple-Organization/component-utils/issues",
   "license": "MIT",
   "devDependencies": {
+    "@playwright/test": "^1.46.1",
+    "@types/node": "^22.4.0",
+    "esbuild": "^0.23.1",
     "prettier": "^3.3.3",
-    "typescript": "^5.5.4",
-    "vite": "^5.4.2"
+    "rollup": "^4.21.0",
+    "rollup-plugin-dts": "^6.1.1",
+    "tsx": "^4.17.0",
+    "typescript": "^5.5.4"
   },
   "files": [
     "dist/index.d.ts",
@@ -28,7 +32,5 @@
   "types": "dist/index.d.ts",
   "type": "module",
   "packageManager": "pnpm@9.6.0",
-  "dependencies": {
-    "glhera-router": "1.0.0-next.8"
-  }
+  "dependencies": {}
 }
