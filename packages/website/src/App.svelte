@@ -11,7 +11,9 @@
 <div id="page__wrapper">
   <Sidebar></Sidebar>
 
-  <div>a
+  <span class="m-icon"></span>
+
+  <div>
     <svelte:component this={component}></svelte:component>
   </div>
 </div>
@@ -20,6 +22,5 @@
   #page__wrapper {
     height: 100vh;
     display: flex;
-    color: aliceblue;
   }
 </style>
