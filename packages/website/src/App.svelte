@@ -11,13 +11,15 @@
 <div id="page__wrapper">
   <Sidebar></Sidebar>
 
-  <div>
+  <div>a
     <svelte:component this={component}></svelte:component>
   </div>
 </div>
 
 <style>
   #page__wrapper {
-    height: 100%;
+    height: 100vh;
+    display: flex;
+    color: aliceblue;
   }
 </style>

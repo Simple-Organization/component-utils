@@ -13,7 +13,6 @@
     width: 10rem;
     padding: 1rem;
     gap: 1rem;
-    height: 100%;
 
     background: var(--mantle);
   }
