@@ -1,13 +1,14 @@
 import App from './App.svelte'
-import { router } from "./router";
-
-console.log('Hello, world!');
-
-router.push('/arroz')
-
+import NavSideBar from '../../components/src/navsidebar/component.svelte';
 
 const app = new (App as any)({
   target: document.getElementById('app')
 })
 
-export default app
+export default app  
+
+const topRoutes = {
+  '/': NavSideBar,  
+};
+
+let component = null;

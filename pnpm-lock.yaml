@@ -114,6 +114,12 @@ importers:
       svelte-check:
         specifier: ^3.5.1
         version: 3.8.6(postcss@8.4.41)(svelte@4.2.19)
+      svelte-preprocess:
+        specifier: ^5.0.4
+        version: 5.1.4(postcss@8.4.41)(svelte@4.2.19)(typescript@5.5.4)
+      tslib:
+        specifier: ^2.6.3
+        version: 2.7.0
       typescript:
         specifier: ^5.5.4
         version: 5.5.4
@@ -904,6 +910,9 @@ packages:
     resolution: {integrity: sha512-65P7iz6X5yEr1cwcgvQxbbIw7Uk3gOy5dIdtZ4rDveLqhrdJP+Li/Hx6tyK0NEb+2GCyneCMJiGqrADCSNk8sQ==}
     engines: {node: '>=8.0'}
 
+  tslib@2.7.0:
+    resolution: {integrity: sha512-gLXCKdN1/j47AiHiOkJN69hJmcbGTHI0ImLmbYLHykhgeN0jVGola9yVjFgzCUklsZQMW55o+dW7IXv3RCXDzA==}
+
   tsx@4.19.0:
     resolution: {integrity: sha512-bV30kM7bsLZKZIOCHeMNVMJ32/LuJzLVajkQI/qf92J2Qr08ueLQvW00PUZGiuLPP760UINwupgUj8qrSCPUKg==}
     engines: {node: '>=18.0.0'}
@@ -1624,6 +1633,8 @@ snapshots:
   to-regex-range@5.0.1:
     dependencies:
       is-number: 7.0.0
+
+  tslib@2.7.0: {}
 
   tsx@4.19.0:
     dependencies:
