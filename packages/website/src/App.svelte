@@ -16,6 +16,7 @@
   <div>
     <svelte:component this={component}></svelte:component>
   </div>
+
 </div>
 
 <style>

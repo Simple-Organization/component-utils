@@ -1,4 +1,4 @@
-import { glheraRouter, matchPath } from 'glhera-router';
+import { glheraRouter } from 'glhera-router';
 import NavSideBar from '../../components/src/navsidebar/component.svelte';
 import Tooltip from '../../components/src/tooltip/component.svelte';
 
