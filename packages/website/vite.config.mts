@@ -10,9 +10,6 @@ export default defineConfig(({ mode }) => {
   //
 
   return {
-    css: {
-      devSourcemap: false,
-    },
 
     plugins: [svelte({
       preprocess: autoPreprocess(),
@@ -20,7 +17,6 @@ export default defineConfig(({ mode }) => {
 
     build: {
       target: 'esnext',
-      outDir: '../api-local/dist/client',
       minify: true,
       modulePreload: { polyfill: false },
     },
