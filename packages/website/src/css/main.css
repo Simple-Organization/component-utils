@@ -1,5 +1,6 @@
 @import url('variables.css');
 @import url('fonts.css');
+@import url('ProseMirror.css');
 
 html,
 body,
@@ -13,3 +14,4 @@ body,
   font-family: 'Roboto';
   color: var(--text);
 }
+

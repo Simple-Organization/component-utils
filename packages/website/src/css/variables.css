@@ -25,4 +25,20 @@ body {
   --base: #1e1e2e;
   --mantle: #181825;
   --crust: #11111b;
+  --text-1: 3.052rem;
+  --text-2: 1.954rem;
+  --text-3: 1.563rem;
+  --text-4: 1.25rem;
+  --text-5: 1rem;
+  --text-6: 0.8rem;
+  --line-1: 3.5rem;
+  --line-2: 2.75rem;
+  --line-3: 2.25rem;
+  --line-4: 2rem;
+  --line-5: 1.5rem;
+  --line-6: 1.5rem;
+  --s-paragraph: var(--line-5);
+  --s-h2-top: 2rem;
+  --s-h3-top: 1rem;
+  --s-h4-top: 1.75rem;
 }
