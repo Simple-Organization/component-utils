@@ -16,14 +16,11 @@
   }
 
   div {
-    position: sticky;
-    top: 0;
-
     display: flex;
     flex-direction: column;
-    width: 10rem;
-    padding: 1rem;
+    padding: 0 1.5rem;
     gap: 0.5rem;
+    height: 100vh;
 
     background: var(--mantle);
   }
