@@ -22,3 +22,5 @@ Site que vai mostrar os componentes que estão disponíveis para serem usados, a
 ### components
 
 Componentes que vão ser usados no projeto
+
+@svelte src/index.ts

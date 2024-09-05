@@ -50,13 +50,16 @@ importers:
       highlight.js:
         specifier: ^11.10.0
         version: 11.10.0
-      marked:
-        specifier: ^14.1.1
-        version: 14.1.1
     devDependencies:
       '@sveltejs/vite-plugin-svelte':
         specifier: ^3.1.2
         version: 3.1.2(svelte@4.2.19)(vite@5.4.3(@types/node@22.5.3))
+      '@types/marked':
+        specifier: ^6.0.0
+        version: 6.0.0
+      marked:
+        specifier: ^14.1.1
+        version: 14.1.1
       prettier:
         specifier: ^3.3.3
         version: 3.3.3
@@ -499,6 +502,10 @@ packages:
 
   '@types/estree@1.0.5':
     resolution: {integrity: sha512-/kYRxGDLWzHOB7q+wtSUQlFrtcdUccpfy+X+9iMBpHK8QLLhx2wIPYuS5DYtR9Wa/YlZAbIovy7qVdB1Aq6Lyw==}
+
+  '@types/marked@6.0.0':
+    resolution: {integrity: sha512-jmjpa4BwUsmhxcfsgUit/7A9KbrC48Q0q8KvnY107ogcjGgTFDlIL3RpihNpx2Mu1hM4mdFQjoVc4O6JoGKHsA==}
+    deprecated: This is a stub types definition. marked provides its own type definitions, so you do not need this installed.
 
   '@types/node@22.5.3':
     resolution: {integrity: sha512-njripolh85IA9SQGTAqbmnNZTdxv7X/4OYGPz8tgy5JDr8MP+uDBa921GpYEoDDnwm0Hmn5ZPeJgiiSTPoOzkQ==}
@@ -1117,6 +1124,10 @@ snapshots:
       - supports-color
 
   '@types/estree@1.0.5': {}
+
+  '@types/marked@6.0.0':
+    dependencies:
+      marked: 14.1.1
 
   '@types/node@22.5.3':
     dependencies:
