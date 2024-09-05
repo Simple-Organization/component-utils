@@ -1,14 +1,12 @@
 <script lang="ts">
-  import Sidebar from './components/sidebar/Sidebar.svelte';
-  import { router, topRoutes } from './router';
-  import { matchPath } from 'glhera-router';
-  import { marked } from 'marked';
-  import { all, common, createLowlight } from 'lowlight';
   import hljs from 'highlight.js';
   import markdown from 'highlight.js/lib/languages/markdown';
   import typescript from 'highlight.js/lib/languages/typescript';
   import javascript from 'highlight.js/lib/languages/javascript';
-
+  import Sidebar from './components/sidebar/Sidebar.svelte';
+  import { router, topRoutes } from './router';
+  import { matchPath } from 'glhera-router';
+  import { marked, type RendererObject } from 'marked';
 
   // Then register the languages you need
   hljs.registerLanguage('markdown', markdown);
@@ -18,38 +16,37 @@
   let text = '';
   let component: any;
   let tree: any = '';
-  fetch('src/components/mdviewer/test.md')
+  fetch('./README.md')
     .then((r) => r.text())
     .then((t) => {
       text = t;
-
       tree = hljs.highlight(
         `
-  let texta: any = '';
-  let component: any;
-  let tree: any = '';
-  
-  fetch('src/components/mdviewer/test.md')
-    .then((r) => r.text())
-    .then((t) => {
-      text = t;
-
-      tree = hljs.highlight(
-        text,
-        { language: 'markdown' },
-      );
-      return <div onclick={() => 'asdasdsdasd'}>
-              <a href="asdasd">
-                b
-              </a>
-             </div>
-    });`,
+          let texta: any = '';
+          let component: any;
+          let tree: any = '';
+        `,
         { language: 'typescript' },
       );
     });
 
   router.pathname.subscribe((path) => (component = matchPath(path, topRoutes)));
-  
+
+  const codeRenderer: RendererObject = {
+    table(token) {
+      const text2 = this.parser.parseInline(token);
+      const escapedText = text2
+        .toLowerCase()
+        .replace(/(?<!\w)@svelte(?!\w)/g, '-');
+
+      return `
+            <h1>
+              ${text2}
+            </h1>`;
+    },
+  };
+
+  marked.use({ renderer: codeRenderer });
 </script>
 
 <div id="page__wrapper">
@@ -57,17 +54,12 @@
     <Sidebar />
   </div>
   <code class="ProseMirror">
-    {@html marked.parse(text)}
     <pre>
       {@html tree.value}
     </pre>
+    {@html marked.parse(text)}
+    {@html marked.parse('@svelte teste')}
   </code>
-</div>
-
-<div onclick={() => 'asdasdsdasd'}>
-  <a href="asdasd">
-    a
-  </a>
 </div>
 
 <style>

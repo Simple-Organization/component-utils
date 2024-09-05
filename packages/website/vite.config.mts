@@ -1,25 +1,18 @@
 import { defineConfig } from 'vite';
 import { svelte } from '@sveltejs/vite-plugin-svelte'
-import autoPreprocess from 'svelte-preprocess';
+import { sveltePreprocess } from 'svelte-preprocess';
 
 // https://vitejs.dev/config/
 
-export default defineConfig(({ mode }) => {
-  const __DEV__ = mode === 'development'
-  //
-  //
+export default defineConfig({
+  plugins: [svelte({
+    preprocess: [sveltePreprocess({ typescript: true, })]
+  })],
 
-  return {
-
-    plugins: [svelte({
-      preprocess: autoPreprocess(),
-    })],
-
-    build: {
-      target: 'esnext',
-      minify: true,
-      modulePreload: { polyfill: false },
-    },
-  };
+  build: {
+    target: 'esnext',
+    minify: true,
+    modulePreload: { polyfill: false },
+  },
 });
 
