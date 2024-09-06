@@ -4,8 +4,8 @@
 
 <div>
   <span>Components</span>
-  {#each Object.keys(topRoutes) as route}    
-    <a href="{route}">{route}</a>
+  {#each Object.keys(topRoutes) as route}
+    <a href={route}>{route}</a>
   {/each}
 </div>
 
@@ -22,7 +22,7 @@
     gap: 0.5rem;
     height: 100vh;
 
-    background: var(--mantle);
+    border-right: 2px solid var(--surface-0);
   }
 
   a {

@@ -15,24 +15,23 @@
   </div>
   {#await fetch('../README.md') then t}
     {#await t.text() then text}
-      <div use:setupCodeblocks={text} id="ProseMirror" />
+      <div class="md__wrapper">
+        <div use:setupCodeblocks={text} id="ProseMirror" />
+      </div>
     {/await}
   {/await}
-
-  <pre>
-    
-    {@html hljs.highlight(
-      'let component: any;\n  let component: any;\n  let component: any;',
-      { language: 'javascript' },
-    ).value}
-  </pre>
 </div>
 
 <style>
+  .md__wrapper {
+    grid-column: 2 / span 3;
+    height: 100vh;
+    overflow-y: scroll;
+  }
   #page__wrapper {
     height: 100vh;
     display: grid;
-    grid-auto-columns: 12rem auto;
+    grid-auto-columns: 15rem auto;
     gap: 2rem;
   }
   .page__sidebar {
