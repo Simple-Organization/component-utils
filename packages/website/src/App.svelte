@@ -3,6 +3,7 @@
   import { setupCodeblocks } from './lib/ce.ts';
   import { router, topRoutes } from './router';
   import Sidebar from './components/sidebar/Sidebar.svelte';
+  import hljs from 'highlight.js';
   let component: any;
 
   router.pathname.subscribe((path) => (component = matchPath(path, topRoutes)));
@@ -14,9 +15,17 @@
   </div>
   {#await fetch('../README.md') then t}
     {#await t.text() then text}
-      <code use:setupCodeblocks={text} id="ProseMirror"></code>
+      <div use:setupCodeblocks={text} id="ProseMirror" />
     {/await}
   {/await}
+
+  <pre>
+    
+    {@html hljs.highlight(
+      'let component: any;\n  let component: any;\n  let component: any;',
+      { language: 'javascript' },
+    ).value}
+  </pre>
 </div>
 
 <style>
@@ -28,15 +37,5 @@
   }
   .page__sidebar {
     grid-column: 0 / 1;
-  }
-  #ProseMirror {
-    padding: 3rem 0;
-    width: 100%;
-    grid-column: 2 / span 3;
-  }
-  pre {
-    background: var(--base);
-    width: min-content;
-    padding: 2rem;
   }
 </style>

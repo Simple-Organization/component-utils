@@ -1,8 +1,10 @@
 #ProseMirror {
+
+  padding: 3rem 5rem 0 0;
+  grid-column: 2 / span 3;
+
   overflow-y: scroll;
   text-align: left;
-
-  padding: 4rem;
   padding-bottom: 50vh;
 
   &:focus {
@@ -10,7 +12,8 @@
   }
 
   pre {
-    background: var(--background-70);
+    white-space: pre-line;
+    overflow-x: scroll;
     border-radius: 0.5rem;
     padding: 1rem;
     margin: 1rem 0;
@@ -75,7 +78,7 @@
   }
 
   h1,
-  h2{
+  h2 {
     border-top: 2px solid var(--surface-2);
     padding-top: var(--s-paragraph);
     color: var(--subtext-0);
@@ -122,11 +125,13 @@
 
     li {
       display: list-item;
+
       p {
         margin: 0;
       }
     }
   }
+
   ul[data-type='taskList'] li {
     display: flex;
     gap: 0.5rem;
@@ -135,6 +140,7 @@
   ul li {
     list-style: circle;
   }
+
   ol li {
     list-style: decimal;
   }

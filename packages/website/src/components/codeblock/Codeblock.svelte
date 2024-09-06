@@ -4,19 +4,12 @@
   // import hljs from 'highlight.js';
 
   export let src: string;
-  console.log(src);
 </script>
 
 <pre>
 	{#await fetch(src) then t}
     {#await t.text() then text}
-      {@html hljs.highlight(text, { language: 'javascript' }).value}
+      {@html hljs.highlightAuto(text).value}
     {/await}
   {/await}	
 </pre>
-
-<style>
-  pre {
-    background: var(--mantle);
-  }
-</style>
