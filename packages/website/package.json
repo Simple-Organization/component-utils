@@ -3,40 +3,40 @@
   "version": "1.0.0-next.0",
   "author": "Simple Organization",
   "scripts": {
-    "dev": "vite",
     "build": "vite build",
+    "dev": "vite",
     "format": "prettier --write \"src/**/*.ts\" \"tests/**/*.ts\"",
-    "test": "playwright test",
-    "prepack": "pnpm build"
+    "prepack": "pnpm build",
+    "test": "playwright test"
   },
   "main": "dist/index.js",
-  "repository": {
-    "type": "git",
-    "url": "https://github.com/Simple-Organization/component-utils.git"
+  "dependencies": {
+    "glhera-router": "1.0.0-next.11",
+    "highlight.js": "^11.10.0"
   },
-  "bugs": "https://github.com/Simple-Organization/component-utils/issues",
-  "license": "MIT",
   "devDependencies": {
     "@sveltejs/vite-plugin-svelte": "^3.1.2",
     "@types/marked": "^6.0.0",
-    "marked": "^14.1.1",
+    "marked": "^14.1.2",
     "prettier": "^3.3.3",
     "svelte": "^4.2.19",
-    "svelte-check": "^4.0.1",
+    "svelte-check": "^4.0.2",
     "svelte-preprocess": "^6.0.2",
     "tslib": "^2.7.0",
-    "typescript": "^5.5.4",
-    "vite": "^5.4.3"
+    "typescript": "^5.6.2",
+    "vite": "^5.4.6"
   },
   "files": [
     "dist/index.d.ts",
     "dist/index.js"
   ],
-  "types": "dist/index.d.ts",
-  "type": "module",
+  "bugs": "https://github.com/Simple-Organization/component-utils/issues",
+  "license": "MIT",
   "packageManager": "pnpm@9.6.0",
-  "dependencies": {
-    "glhera-router": "1.0.0-next.11",
-    "highlight.js": "^11.10.0"
-  }
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/Simple-Organization/component-utils.git"
+  },
+  "type": "module",
+  "types": "dist/index.d.ts"
 }

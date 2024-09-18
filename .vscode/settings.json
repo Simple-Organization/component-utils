@@ -2,6 +2,8 @@
   "explorer.fileNesting.enabled": true,
   "explorer.fileNesting.patterns": {
     "*.props.ts": "${capture}.props.ts",
-    "*.md": "${capture}.props.ts, ${capture}.ts, ${capture}.svelte, ${capture}.tsx, ${capture}.css"
-  }
+    "*.md": "${capture}.props.ts, ${capture}.ts, ${capture}.svelte, ${capture}.tsx, ${capture}.css",
+    "package.json": "pnpm-workspace.yaml, pnpm-lock.yaml, .gitignore, .prettierrc.yml"
+  },
+  "explorer.fileNesting.expand": false
 }

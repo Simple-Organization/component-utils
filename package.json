@@ -5,35 +5,35 @@
   "scripts": {
     "build": "tsc && rollup -c && tsx esbuild.ts",
     "format": "prettier --write \"src/**/*.ts\" \"tests/**/*.ts\"",
-    "test": "playwright test",
-    "prepack": "pnpm build"
+    "prepack": "pnpm build",
+    "test": "playwright test"
   },
   "main": "dist/index.js",
-  "repository": {
-    "type": "git",
-    "url": "https://github.com/Simple-Organization/component-utils.git"
+  "dependencies": {
+    "glhera-router": "1.0.0-next.11"
   },
-  "bugs": "https://github.com/Simple-Organization/component-utils/issues",
-  "license": "MIT",
   "devDependencies": {
-    "@playwright/test": "^1.46.1",
-    "@types/node": "^22.5.3",
+    "@playwright/test": "^1.47.1",
+    "@types/node": "^22.5.5",
     "esbuild": "^0.23.1",
     "prettier": "^3.3.3",
-    "rollup": "^4.21.2",
+    "rollup": "^4.21.3",
     "rollup-plugin-dts": "^6.1.1",
-    "tsx": "^4.19.0",
-    "typescript": "^5.5.4",
-    "vite": "^5.4.3"
+    "tsx": "^4.19.1",
+    "typescript": "^5.6.2",
+    "vite": "^5.4.6"
   },
   "files": [
     "dist/index.d.ts",
     "dist/index.js"
   ],
-  "types": "dist/index.d.ts",
-  "type": "module",
+  "bugs": "https://github.com/Simple-Organization/component-utils/issues",
+  "license": "MIT",
   "packageManager": "pnpm@9.6.0",
-  "dependencies": {
-    "glhera-router": "1.0.0-next.11"
-  }
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/Simple-Organization/component-utils.git"
+  },
+  "type": "module",
+  "types": "dist/index.d.ts"
 }
